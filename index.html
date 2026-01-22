@@ -1,0 +1,323 @@
+<!-- index.html (FULL) -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Muzammil — Video Editor</title>
+  <meta name="description" content="Video editor focused on clean pacing, strong retention, and YouTube/short-form." />
+
+  <link rel="preconnect" href="https://img.youtube.com" />
+  <link rel="preconnect" href="https://www.youtube.com" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter+Tight:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Live background -->
+  <div class="bg" id="bg" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="#top" aria-label="Go to top">
+        <span class="brand__dot"></span>
+        <span class="brand__name">Muzammil</span>
+        <span class="brand__role">Video Editor</span>
+      </a>
+
+      <input class="hamburger" id="hamburger" type="checkbox" aria-label="Open menu" />
+      <label class="hamburgerBtn" for="hamburger" aria-hidden="true">
+        <span></span><span></span>
+      </label>
+
+      <nav class="nav">
+        <a class="nav__link" href="#work"><span>#</span>work</a>
+        <a class="nav__link" href="#services"><span>#</span>services</a>
+        <a class="nav__link" href="#about"><span>#</span>about</a>
+        <a class="nav__link nav__link--cta" href="#contact"><span>#</span>contact</a>
+      </nav>
+    </div>
+
+    <!-- mobile dropdown -->
+    <div class="mobile" id="mobile">
+      <div class="container mobile__inner">
+        <a class="mobile__link" href="#work"><span>#</span>work</a>
+        <a class="mobile__link" href="#services"><span>#</span>services</a>
+        <a class="mobile__link" href="#about"><span>#</span>about</a>
+        <a class="mobile__link mobile__link--cta" href="#contact"><span>#</span>contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top" class="page">
+    <!-- HERO -->
+    <section class="container hero">
+      <div class="hero__left">
+        <div class="chips">
+          <span class="chip">Premiere Pro</span>
+          <span class="chip">YouTube</span>
+          <span class="chip">Short-form</span>
+          <span class="chip">Fast turnaround</span>
+        </div>
+
+        <h1 class="h1">
+          Hi, I’m Muzammil
+          <span class="heroLine">I edit videos people actually finish.</span>
+        </h1>
+
+        <p class="p">
+          Clean cuts. Strong pacing. Clean audio.
+          If you want your content to feel sharp and easy to watch, I can help.
+        </p>
+
+        <!-- Desktop/Tablet: stays here (original location) -->
+        <div class="actions">
+          <a class="btn btn--primary" id="ctaBookDesktop" href="#contact">Book a Meeting</a>
+          <!-- <a class="btn btn--ghost" href="#work">View Projects</a> -->
+        </div>
+
+        <!-- ✅ REMOVED: 8+ / Clean / Quick feature boxes -->
+      </div>
+
+      <div class="hero__right">
+        <div class="panel">
+          <div class="panel__top">
+            <div>
+              <div class="kicker">showreel</div>
+              <div class="muted">click play</div>
+            </div>
+            <a class="tiny" href="#work">see work ↓</a>
+          </div>
+
+          <div class="frame frame--thumb" id="showreelFrame">
+            <img id="showreelThumb" alt="Showreel thumbnail" loading="lazy" />
+            <button class="play" id="playShowreel" aria-label="Play showreel">
+              <span class="play__circle">▶</span>
+              <span class="play__text">play</span>
+            </button>
+          </div>
+
+          <div class="panel__bottom muted">
+            Showreel plays inside the site. If embed is blocked, you can open it on YouTube.
+          </div>
+        </div>
+
+        <!-- MOBILE ONLY: second Book a Meeting button under showreel -->
+        <div class="showreelCtaMobile">
+          <a class="btn btn--primary btnWide" id="ctaBookMobile" href="#contact">Book a Meeting</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section id="work" class="container section">
+      <div class="head">
+        <h2 class="h2">work</h2>
+        <p class="muted">same size grid. click to watch.</p>
+      </div>
+
+      <div class="workbar">
+        <div class="seg" role="tablist" aria-label="Work filters">
+          <button class="seg__btn is-active" data-filter="all" role="tab" aria-selected="true">all</button>
+          <button class="seg__btn" data-filter="short" role="tab" aria-selected="false">short-form</button>
+        </div>
+
+        <div class="search">
+          <input id="search" type="search" placeholder="search (ex: reels, talking head…)" />
+        </div>
+      </div>
+
+      <div id="workGrid" class="grid"></div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="container section">
+      <div class="head">
+        <h2 class="h2">services</h2>
+        <p class="muted">clear and simple.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <h3 class="h3">youtube editing</h3>
+          <p class="muted">talking-head, vlogs, story edits, pacing, cleanup, exports.</p>
+          <ul class="list">
+            <li>structure + pacing</li>
+            <li>cuts + b-roll</li>
+            <li>clean audio</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3 class="h3">short-form</h3>
+          <p class="muted">tight hook. fast cuts. vertical export done right.</p>
+          <ul class="list">
+            <li>hook-first edits</li>
+            <li>tight pacing</li>
+            <li>vertical versions</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3 class="h3">polish</h3>
+          <p class="muted">make it look and sound clean.</p>
+          <ul class="list">
+            <li>color correction</li>
+            <li>audio cleanup</li>
+            <li>smooth transitions</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="container section">
+      <div class="head">
+        <h2 class="h2">about</h2>
+        <p class="muted">quick summary.</p>
+      </div>
+
+      <div class="about">
+        <div class="card">
+          <p>
+            I’m a video editor focused on clean storytelling and strong pacing.
+            If your footage is good, I’ll make it feel tight and professional.
+          </p>
+          <p class="muted">
+            If something is unclear, I’ll ask fast. If something looks off, I’ll fix it.
+          </p>
+
+          <div class="tags">
+            <span class="tag">premiere pro</span>
+            <span class="tag">youtube</span>
+            <span class="tag">short-form</span>
+            <span class="tag">audio cleanup</span>
+          </div>
+
+          <!-- ✅ REMOVED: aboutStatsMount -->
+        </div>
+
+        <div class="card">
+          <div class="kicker">how it works</div>
+          <div class="steps">
+            <div class="step"><span class="step__s">1</span><div><div class="step_t">you send footage</div><div class="muted">drive/dropbox link or raw files.</div></div></div>
+            <div class="step"><span class="step_s">2</span><div><div class="step_t">first cut</div><div class="muted">structure, pacing, audio sync.</div></div></div>
+            <div class="step"><span class="step_s">3</span><div><div class="step_t">revisions</div><div class="muted">you point, i fix.</div></div></div>
+            <div class="step"><span class="step_s">4</span><div><div class="step_t">final export</div><div class="muted">youtube / ig-ready formats.</div></div></div>
+          </div>
+
+          <div class="muted topLine">
+            send 1–2 reference videos you like. i can match that style.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="container section">
+      <div class="head">
+        <h2 class="h2">contact</h2>
+        <p class="muted">send details and i’ll reply with a plan.</p>
+      </div>
+
+      <div class="contact">
+        <div class="contact__left">
+          <div class="kicker">book a meeting</div>
+          <h3 class="h3 big">Tell me what you need edited</h3>
+          <p class="muted">
+            Share video type, length, deadline, and links.
+            If you have a channel you like, send 1–2 examples.
+          </p>
+
+          <div class="card soft">
+            <div class="kicker">good fit if you need:</div>
+            <ul class="list">
+              <li>consistent youtube edits</li>
+              <li>shorts/reels that move fast</li>
+              <li>clean audio + smoother flow</li>
+              <li>simple, professional look</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="contact__right card">
+          <form id="contactForm" class="form">
+            <label class="field">
+              <span>name</span>
+              <input name="name" required placeholder="your name" />
+            </label>
+
+            <label class="field">
+              <span>channel / brand</span>
+              <input name="brand" placeholder="youtube channel or brand name" />
+            </label>
+
+            <label class="field">
+              <span>email</span>
+              <input name="email" type="email" required placeholder="you@example.com" />
+            </label>
+
+            <label class="field">
+              <span>phone / whatsapp</span>
+              <input name="phone" placeholder="+1 (306) ... or +92 ..." />
+            </label>
+
+            <div class="row2">
+              <label class="field">
+                <span>video type</span>
+                <select name="type">
+                  <option value="YouTube">youtube</option>
+                  <option value="Short-form">short-form</option>
+                  <option value="Promo">promo</option>
+                  <option value="Other">other</option>
+                </select>
+              </label>
+
+              <label class="field">
+                <span>deadline</span>
+                <select name="deadline">
+                  <option value="No rush">no rush</option>
+                  <option value="24-48h">24–48h</option>
+                  <option value="3-5d">3–5 days</option>
+                  <option value="1-2w">1–2 weeks</option>
+                  <option value="2+w">2+ weeks</option>
+                </select>
+              </label>
+            </div>
+
+            <label class="field">
+              <span>project details</span>
+              <textarea name="details" rows="5" placeholder="length, style, links, what you want improved…"></textarea>
+            </label>
+
+            <button class="btn btn--primary btnWide" type="submit">send</button>
+            <p class="muted tiny2">this opens your email app (works on github pages).</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer container">
+      <div class="muted">© <span id="year"></span> Muzammil</div>
+      <a class="tiny" href="#top">back to top ↑</a>
+    </footer>
+  </main>
+
+  <!-- Modal -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal__bg" id="modalBg"></div>
+    <div class="modal__panel" role="dialog" aria-modal="true" aria-label="Video player">
+      <button class="modal__close" id="modalClose" aria-label="Close">✕</button>
+      <div class="modal__frame" id="modalFrame"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
