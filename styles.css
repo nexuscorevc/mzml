@@ -163,11 +163,6 @@ a{ color:inherit; text-decoration:none; }
   border-color: rgba(124,92,255,.35);
   background: var(--accentOp);
 }
-@media (max-width: 768px){
-  #ctaBookDesktop { display: none; }
-  .actions { margin-bottom: 0; }
-}
-
 
 @media (max-width: 1024px){
   .nav{ display:none; }
@@ -619,3 +614,22 @@ a{ color:inherit; text-decoration:none; }
   .workCard{ transition:none; }
 }
 
+/* ✅ FIX: only 1 "Book a Meeting" on mobile (keep the one under showreel) */
+@media (max-width: 768px){
+  #ctaBookDesktop{
+    display: none !important;
+  }
+
+  .showreelCtaMobile{
+    display: block !important;
+  }
+
+  #ctaBookMobile{
+    display: inline-flex !important;
+  }
+
+  /* optional: remove extra gap where the hidden button used to be */
+  .actions{
+    margin-bottom: 0 !important;
+  }
+}
