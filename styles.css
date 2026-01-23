@@ -15,8 +15,9 @@
   --radius: 14px;
   --container: min(1024px, 92vw);
 
-  --font-body: "Fira Code", monospace;
+  --font-body: "Inter Tight", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   --font-display: "Inter Tight", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+
 }
 
 *{ box-sizing:border-box; }
@@ -633,3 +634,4 @@ a{ color:inherit; text-decoration:none; }
     margin-bottom: 0 !important;
   }
 }
+
